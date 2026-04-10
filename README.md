@@ -40,6 +40,16 @@ cp .env.example .env
 
 Run with `uv run --env-file .env second_brain` to load dev environment (no auto-loading).
 
+## Logging
+
+stderr uses a compact format — no milliseconds, 3-letter level codes, pipe separators:
+
+```
+2026-04-05 20:52:59 | INF | second_brain.app:main:29 | Hello from second_brain!
+```
+
+The file handler (`app.log`) keeps the default verbose loguru format.
+
 ## Testing
 
 Run tests:
